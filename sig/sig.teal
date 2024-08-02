@@ -2,6 +2,14 @@
 txn TypeEnum
 int appl
 ==
+txn ApplicationID
+int 0
+!=
+&&
+txn OnCompletion
+int NoOp
+==
+&&
 txn RekeyTo
 global ZeroAddress
 ==
@@ -10,12 +18,8 @@ txn Fee
 int 0
 ==
 &&
-txn OnCompletion
-int NoOp
-==
-&&
 byte ""
-byte 0xd13b4d016f7225e3
+byte 0xd13b010003a541d0
 !=
 &&
 return

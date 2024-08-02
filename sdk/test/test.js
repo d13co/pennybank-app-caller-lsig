@@ -2,7 +2,7 @@ import algosdk from 'algosdk';
 import { signTxn, getLsig, getAddress, } from '../dist/index.js';
 import { expect } from 'expect';
 
-const expectedAddress = "NULLCALLNLN64MIYDOS53BNRJGIHFLGXUYZXYBFYDY2GWUGG5H4VQ24Y4Y";
+const expectedAddress = "CALL4PPDRTSRRZXHBMYTPVIS4RQPRXBD3WX4FD7KJKAZIIPV2LPJM5RL2M";
 
 const suggestedParams = {
   "consensusVersion": "https://github.com/algorandfoundation/specs/tree/925a46433742afb0b51bb939354bd907fa88bf95",
@@ -36,7 +36,7 @@ describe('app-caller', () => {
       suggestedParams,
     });
     const signed = signTxn(algosdk, txn);
-    expect(signed.txID).toBe('Q47HTYL64KS6HWELDMF4KAH36LP5E4GAC34XDU275KFFDLTZD2ZA');
+    expect(signed.txID).toBe('DZPIW56MGKDHHX5FK2TXUNYICIDH3FAYODTFQNL5N4KEK42M44BQ');
     expect(signed.blob).toBeInstanceOf(Uint8Array);
   });
 
