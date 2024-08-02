@@ -1,0 +1,21 @@
+#pragma version 5
+txn TypeEnum
+int appl
+==
+txn RekeyTo
+global ZeroAddress
+==
+&&
+txn Fee
+int 0
+==
+&&
+txn OnCompletion
+int NoOp
+==
+&&
+byte ""
+byte 0xd13b4d016f7225e3
+!=
+&&
+return
