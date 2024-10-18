@@ -19,7 +19,7 @@ int 0
 ==
 &&
 byte ""
-byte 0xd131f90068477b8c
+byte 0x1cd3170486ca218b
 !=
 &&
 return

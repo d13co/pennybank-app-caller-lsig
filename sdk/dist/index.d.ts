@@ -1,6 +1,6 @@
 import type { LogicSigAccount, Transaction } from 'algosdk';
 import algosdk from 'algosdk';
-export declare const logicSigStr = "BSABADEQgQYSMRgiExAxGSISEDEgMgMSEDEBIhIQgACACNEx+QBoR3uMExBD";
+export declare const logicSigStr = "BSABADEQgQYSMRgiExAxGSISEDEgMgMSEDEBIhIQgACACBzTFwSGyiGLExBD";
 type Algosdk = typeof algosdk;
 interface SignedTxn {
     txID: string;
