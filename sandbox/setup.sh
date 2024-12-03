@@ -19,7 +19,7 @@ algokit goal clerk compile app.teal
 
 echo compiled
 
-out=$(algokit goal app create --creator MR3CVALT5BEFD3QHAEV3JVDFV3ACWIBTTKTCK3WGZK73OOHAXOVP53J6RA --approval-prog app.teal --clear-prog app.teal)
+out=$(algokit goal app create --creator MR3CVALT5BEFD3QHAEV3JVDFV3ACWIBTTKTCK3WGZK73OOHAXOVP53J6RA --approval-prog app.teal --clear-prog app.teal --local-byteslices 1)
 
 echo -e "$out"
 

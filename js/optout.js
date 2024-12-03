@@ -18,7 +18,7 @@ const suggestedParams = await algod.getTransactionParams().do();
 const txns = [];
 
 // LSig can call applications with onComplete=noop and zero fees
-txns.push(algosdk.makeApplicationNoOpTxnFromObject({
+txns.push(algosdk.makeApplicationCloseOutTxnFromObject({
   from: lsigAddress,
   appIndex: appId,
   // rekeyTo: owner, // uncomment to fail
@@ -33,6 +33,7 @@ txns.push(algosdk.makeApplicationNoOpTxnFromObject({
 
 const gtxns = algosdk.assignGroupID(txns);
 
+console.log(txns[0]);
 const signed = [
   signTxn(algosdk, gtxns[0]).blob,
 ];

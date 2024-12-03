@@ -1,25 +1,17 @@
 #pragma version 5
+bytecblock 0x006223001a0f6ece
 txn TypeEnum
 int appl
-==
-txn ApplicationID
-int 0
-!=
+== // only app calls
+txn RekeyTo
+global ZeroAddress
+== // no rekeys
 &&
 txn OnCompletion
 int NoOp
 ==
+txn OnCompletion
+int OptIn
+== 
+|| // only noops and optins
 &&
-txn RekeyTo
-global ZeroAddress
-==
-&&
-txn Fee
-int 0
-==
-&&
-byte ""
-byte 0x1cd3170486ca218b
-!=
-&&
-return

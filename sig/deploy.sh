@@ -1,11 +1,12 @@
 #!/bin/bash
 
 set -e
+set -o xtrace
 set -o pipefail
 
-python3 sig.py > sig.teal
+# python3 sig.py > sig.teal
 
-addr=$(algokit goal clerk compile sig.teal  | tail -n +2 | awk '{ print $2 }')
+addr=$(algokit goal clerk compile sig.teal  | tail -n 1 | awk '{ print $2 }')
 
 echo $addr
 

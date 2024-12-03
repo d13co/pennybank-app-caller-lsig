@@ -1,6 +1,16 @@
 #pragma version 10
-global OpcodeBudget
-itob
-log
-int 1
+txn ApplicationID
+pushint 0
+==
+bnz label1  // on creation, return true
+itxn_begin // pay caller back their fees
+pushint 1
+itxn_field TypeEnum
+txn Sender
+itxn_field Receiver
+txn Fee
+itxn_field Amount
+itxn_submit
+label1:
+pushint 1
 return

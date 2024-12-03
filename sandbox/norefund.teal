@@ -1,0 +1,24 @@
+#pragma version 10
+intcblock 0 1 4 5
+txn ApplicationID
+intc_0 // 0
+==
+bnz label1  // on creation, return true
+intc_2 // 4
+txn OnCompletion
+==
+bnz label2  // on update, reject
+intc_3 // 5
+txn OnCompletion
+==
+bnz label2  // on delete, reject
+intc_0 // 0
+txn OnCompletion
+!=
+bnz label1  // not noop? accept
+label1:
+intc_1 // 1
+return
+label2:
+intc_0 // 0
+return
