@@ -1,17 +1,17 @@
 #pragma version 5
-bytecblock 0x006223001a0f6ece
-txn TypeEnum
-int appl
-== // only app calls
-txn RekeyTo
-global ZeroAddress
-== // no rekeys
+bytecblock 0xdd8dd5c9a1f9ef1d // magic penny bank the second
+    txn TypeEnum
+    int appl
+  == // only app calls
+    txn RekeyTo
+    global ZeroAddress
+  == // no rekeys
 &&
-txn OnCompletion
-int NoOp
-==
-txn OnCompletion
-int OptIn
-== 
-|| // only noops and optins
+    txn OnCompletion
+    int NoOp
+    ==
+    txn OnCompletion
+    int OptIn
+    == 
+  || // only noops and optins
 &&

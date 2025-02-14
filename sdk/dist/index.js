@@ -1,4 +1,4 @@
-export const logicSigStr = 'BSYBCNE9E9E9E9E9MRCBBhIxIDIDEhAxGYEAEjEZgQESERA=';
+export const logicSigStr = 'BSYBCN2N1cmh+e8dMRCBBhIxIDIDEhAxGYEAEjEZgQESERA=';
 function base64ToUint8Array(base64) {
     var binaryString = atob(base64);
     return new Uint8Array(binaryString.split("").map((l) => l.charCodeAt(0)));

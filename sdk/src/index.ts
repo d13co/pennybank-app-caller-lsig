@@ -1,7 +1,7 @@
 import type { LogicSigAccount, Transaction } from 'algosdk';
 import algosdk from 'algosdk';
 
-export const logicSigStr = 'BSYBCNE9E9E9E9E9MRCBBhIxIDIDEhAxGYEAEjEZgQESERA=';
+export const logicSigStr = 'BSYBCN2N1cmh+e8dMRCBBhIxIDIDEhAxGYEAEjEZgQESERA=';
 
 type Algosdk = typeof algosdk;
 
