@@ -22,7 +22,7 @@ The logic sig is opted in to an application, which prevents draining it entirely
 
 When using the logic sig, you should assume that it will (eventally) be at exactly its MBR balance, with zero spendable microALGO.
 
-However, within an application call*, the MBR can be soft-violated, as long as it is legal by the end of all inner transactions.
+However, within an application call, the MBR can be soft-violated, as long as it is legal by the end of all inner transactions.
 
 To use this with non-zero transaction fees, you must enforce repayment of the sender fees in your smart contract.
 
