@@ -45,8 +45,8 @@ You can compose atomic groups where this logic sig "boostraps" an app call and p
 In this example, a fictional smart contract is used to seed a new account ABCDE.. with 0.1 ALGO:
 
 1) App call: Method: seed_new_account(ABCDEF..); Sender: PENNYBANK..; Fee: 0.001
-  1a) Inner Payment: 0.1 ALGO to ABCDEF..
-  1b) Inner Payment: 0.001 ALGO to PENNYBANK..
+    1a) Inner Payment: 0.1 ALGO to ABCDEF..
+    1b) Inner Payment: 0.001 ALGO to PENNYBANK..
 
 Within the outer app call, the MBR of PENNYBANK.. is temporarily violated (MBR - 0.001) but by the end of it the contract has repayed the MBR deficit.
 
