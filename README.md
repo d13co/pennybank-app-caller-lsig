@@ -30,11 +30,13 @@ To use this with non-zero transaction fees, you must enforce repayment of the se
 
 ### With zero fees
 
-Use this logic sig to sign for resource- or opcode- padding application calls:
+Use this logic sig to sign for resource- or opcode- padding application calls.
 
-- 1. App call: Method: real_method(); Sender: User; Fee: 0.003
-- 1. App call: Method: op_up(); Sender: PENNYBANK..; Fee: 0
-- 1. App call: Method: op_up(); Sender: PENNYBANK..; Fee: 0
+Example atomic group:
+
+1) App call: Method: real_method(); Sender: User; Fee: 0.003
+2) App call: Method: op_up(); Sender: PENNYBANK..; Fee: 0
+3) App call: Method: op_up(); Sender: PENNYBANK..; Fee: 0
 
 ### With fees
 
@@ -42,9 +44,9 @@ You can compose atomic groups where this logic sig "boostraps" an app call and p
 
 In this example, a fictional smart contract is used to seed a new account ABCDE.. with 0.1 ALGO:
 
-- 1) App call: Method: seed_new_account(ABCDEF..); Sender: PENNYBANK..; Fee: 0.001
-  - 1a) Inner Payment: 0.1 ALGO to ABCDEF..
-  - 1b) Inner Payment: 0.001 ALGO to PENNYBANK..
+1) App call: Method: seed_new_account(ABCDEF..); Sender: PENNYBANK..; Fee: 0.001
+  1a) Inner Payment: 0.1 ALGO to ABCDEF..
+  1b) Inner Payment: 0.001 ALGO to PENNYBANK..
 
 Within the outer app call, the MBR of PENNYBANK.. is temporarily violated (MBR - 0.001) but by the end of it the contract has repayed the MBR deficit.
 
